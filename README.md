@@ -1,7 +1,5 @@
-# mesh_msgs_transform
+# mesh_msgs_examples
 
-Functions for transforming meshes.
+Some examples showing how the mesh_msgs of [mesh_tools](https://github.com/naturerobots/mesh_tools) work.
 
-## ROS2 Port TODOs
 
-Here is still tf(1) used. Is this package in use?
