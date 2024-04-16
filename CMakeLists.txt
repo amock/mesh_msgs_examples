@@ -35,4 +35,22 @@ install(
   DESTINATION lib/${PROJECT_NAME}
 )
 
+
+add_executable(publish_mesh_with_vertex_colors
+  src/publish_mesh_with_vertex_colors.cpp
+)
+
+ament_target_dependencies(publish_mesh_with_vertex_colors
+  rclcpp
+  mesh_msgs
+  tf2
+  tf2_ros
+  geometry_msgs
+)
+
+install(
+  TARGETS publish_mesh_with_vertex_colors
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 ament_package()
