@@ -17,7 +17,9 @@ find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
-
+##########################################
+### Example 1: Mesh geometry cube      ###
+##########################################
 add_executable(publish_mesh_geometry
   src/publish_mesh_geometry.cpp
 )
@@ -35,7 +37,9 @@ install(
   DESTINATION lib/${PROJECT_NAME}
 )
 
-
+##########################################
+### Example 2: Mesh with vertex colors ###
+##########################################
 add_executable(publish_mesh_with_vertex_colors
   src/publish_mesh_with_vertex_colors.cpp
 )
@@ -50,6 +54,26 @@ ament_target_dependencies(publish_mesh_with_vertex_colors
 
 install(
   TARGETS publish_mesh_with_vertex_colors
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+##########################################
+### Example 3: Mesh with texture       ###
+##########################################
+add_executable(publish_mesh_with_texture
+  src/publish_mesh_with_texture.cpp
+)
+
+ament_target_dependencies(publish_mesh_with_texture
+  rclcpp
+  mesh_msgs
+  tf2
+  tf2_ros
+  geometry_msgs
+)
+
+install(
+  TARGETS publish_mesh_with_texture
   DESTINATION lib/${PROJECT_NAME}
 )
 
